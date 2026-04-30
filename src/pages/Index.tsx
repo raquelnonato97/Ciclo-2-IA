@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, Bot, Cpu, Zap } from "lucide-react";
+import { ArrowRight, Bot, Cpu, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
@@ -21,33 +21,22 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-md text-center"
+          className="w-full max-w-2xl text-center"
         >
-          {/* Badge */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
-          >
-            <Sparkles size={14} className="text-indigo-400" />
-            <span className="text-xs font-medium tracking-wider uppercase text-indigo-200/80">Nova Era da Inteligência</span>
-          </motion.div>
-
           {/* Hero Title */}
-          <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-            Olá <br />
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1]">
+            Seja bem vindo a <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-indigo-400 via-purple-400 to-pink-400">
-              IA Generativa
+              Nova Era da Inteligência
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 mb-10 leading-relaxed font-light">
+          <p className="text-lg text-slate-400 mb-10 max-w-md mx-auto leading-relaxed font-light">
             Explore o potencial ilimitado da colaboração entre humanos e máquinas em uma interface projetada para o futuro.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
             <Button className="h-14 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white border-none shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all duration-300 group">
               Começar Agora
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -58,7 +47,7 @@ const Index = () => {
           </div>
 
           {/* Feature Grid (Mobile Friendly) */}
-          <div className="grid grid-cols-3 gap-4 mt-16">
+          <div className="grid grid-cols-3 gap-4 mt-16 max-w-md mx-auto">
             {[
               { icon: Bot, label: "Smart" },
               { icon: Cpu, label: "Fast" },
