@@ -10,6 +10,10 @@ import { useNavigate } from "react-router-dom";
 const Index = () => {
   const navigate = useNavigate();
 
+  const handleDocsClick = () => {
+    window.open("https://github.com/raquelnonato97/Ciclo-2-IA.git", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-[#030712] text-white selection:bg-indigo-500/30">
       {/* Background Elements */}
@@ -47,7 +51,11 @@ const Index = () => {
               Começar Agora
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" className="h-14 rounded-2xl border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white transition-all">
+            <Button 
+              variant="outline" 
+              onClick={handleDocsClick}
+              className="h-14 rounded-2xl border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white transition-all"
+            >
               Ver Documentação
             </Button>
           </div>
