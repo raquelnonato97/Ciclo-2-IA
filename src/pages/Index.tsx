@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
-import { ArrowRight, Bot, Cpu, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { useNavigate } from "react-router-dom";
@@ -58,26 +58,6 @@ const Index = () => {
             >
               Ver Documentação
             </Button>
-          </div>
-
-          {/* Feature Grid (Mobile Friendly) */}
-          <div className="grid grid-cols-3 gap-4 mt-16 max-w-md mx-auto">
-            {[
-              { icon: Bot, label: "Smart" },
-              { icon: Cpu, label: "Fast" },
-              { icon: Zap, label: "Power" }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + (i * 0.1) }}
-                className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 border border-white/5"
-              >
-                <item.icon size={20} className="text-indigo-400" />
-                <span className="text-[10px] font-medium uppercase tracking-widest text-slate-500">{item.label}</span>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </main>
