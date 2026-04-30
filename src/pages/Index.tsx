@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, Bot, Cpu, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-[#030712] text-white selection:bg-indigo-500/30">
       {/* Background Elements */}
@@ -37,7 +40,10 @@ const Index = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
-            <Button className="h-14 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white border-none shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all duration-300 group">
+            <Button 
+              onClick={() => navigate("/ferramentas")}
+              className="h-14 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white border-none shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all duration-300 group"
+            >
               Começar Agora
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
