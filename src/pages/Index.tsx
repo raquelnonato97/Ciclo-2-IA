@@ -79,7 +79,15 @@ const Index = () => {
         </motion.div>
       </main>
 
-      <footer className="relative z-10 w-full pb-8">
+      <footer className="relative z-10 w-full pb-8 flex flex-col items-center justify-center gap-1">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="text-slate-500 text-sm font-light tracking-wide"
+        >
+          Desenvolvido por <span className="text-indigo-400 font-medium">Raquel Nonato</span>
+        </motion.div>
         <MadeWithDyad />
       </footer>
     </div>
